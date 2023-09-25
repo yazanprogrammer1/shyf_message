@@ -1,10 +1,9 @@
 package com.example.shyf_message.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.shyf_message.databinding.ActivityBaseBinding
-import com.example.shyf_message.databinding.ActivityMainBinding
 import com.example.shyf_message.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
@@ -19,7 +18,6 @@ open class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         val database: FirebaseFirestore = FirebaseFirestore.getInstance()
         docRef = database.collection(Constants.KEY_COLLECTION_USER).document(FirebaseAuth.getInstance().uid!!)

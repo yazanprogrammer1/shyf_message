@@ -60,32 +60,32 @@ class SettingsFragment : BaseFragments() {
         binding.btnLogout.setOnClickListener {
             signOut()
         }
-        binding.settingscreenIvProfile.setOnClickListener {
-            val currentStory = MyStory(
-                "https://firebasestorage.googleapis.com/v0/b/shyf-f9631.appspot.com/o/USER_IMAGE1694283333997.jpg?alt=media&token=4d5356ec-c28c-4ea2-9ff9-2df3185349c4",
-                SimpleDateFormat("MM/dd/yyyy hh:mm:ss a").parse("٠٩/١١/٢٠٢٣ ٠٤:٠٦:٤٥ م"),
-                "Hi My name is yazan"
-            )
-            listStory.add(currentStory)
-            StoryView.Builder(requireActivity().supportFragmentManager)
-                .setStoriesList(listStory)
-                .setStoryDuration(5000)
-                .setTitleText("Yazan Abu Ali")
-                .setSubtitleText("Like & Share")
-                .setTitleLogoUrl("https://firebasestorage.googleapis.com/v0/b/shyf-f9631.appspot.com/o/USER_IMAGE1694283333997.jpg?alt=media&token=4d5356ec-c28c-4ea2-9ff9-2df3185349c4")
-                .setStoryClickListeners(object :StoryClickListeners{
-                    override fun onDescriptionClickListener(position: Int) {
-                       //
-                    }
-
-                    override fun onTitleIconClickListener(position: Int) {
-                        //
-                    }
-
-                })
-                .build()
-                .show()
-        }
+//        binding.settingscreenIvProfile.setOnClickListener {
+//            val currentStory = MyStory(
+//                "https://firebasestorage.googleapis.com/v0/b/shyf-f9631.appspot.com/o/USER_IMAGE1694283333997.jpg?alt=media&token=4d5356ec-c28c-4ea2-9ff9-2df3185349c4",
+//                SimpleDateFormat("MM/dd/yyyy hh:mm:ss a").parse("٠٩/١١/٢٠٢٣ ٠٤:٠٦:٤٥ م"),
+//                "Hi My name is yazan"
+//            )
+//            listStory.add(currentStory)
+//            StoryView.Builder(requireActivity().supportFragmentManager)
+//                .setStoriesList(listStory)
+//                .setStoryDuration(5000)
+//                .setTitleText("Yazan Abu Ali")
+//                .setSubtitleText("Like & Share")
+//                .setTitleLogoUrl("https://firebasestorage.googleapis.com/v0/b/shyf-f9631.appspot.com/o/USER_IMAGE1694283333997.jpg?alt=media&token=4d5356ec-c28c-4ea2-9ff9-2df3185349c4")
+//                .setStoryClickListeners(object :StoryClickListeners{
+//                    override fun onDescriptionClickListener(position: Int) {
+//                       //
+//                    }
+//
+//                    override fun onTitleIconClickListener(position: Int) {
+//                        //
+//                    }
+//
+//                })
+//                .build()
+//                .show()
+//        }
         binding.settingScreenCvAccountdetailicon.setOnClickListener {
             val bottomSheetFragment = AccountDetailFragment()
             bottomSheetFragment.show(requireActivity().supportFragmentManager, "bottomSheetTag")

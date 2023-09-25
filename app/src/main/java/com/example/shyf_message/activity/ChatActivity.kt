@@ -1,5 +1,6 @@
 package com.example.shyf_message.activity
 
+import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
@@ -7,10 +8,12 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -352,6 +355,7 @@ class ChatActivity : BaseActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun reply() {
         binding.replyCv.visibility = View.VISIBLE
         val selectedItems = adapter.getSelectedItems()
@@ -414,6 +418,10 @@ class ChatActivity : BaseActivity() {
         val bottomSheet: BottomSheetDialog = BottomSheetDialog(this, R.style.BottomSheetDialogTheme)
         bottomSheet.setContentView(R.layout.attachmentbottomsheet_dialog)
         bottomSheet.show()
+        val btnImage = bottomSheet.findViewById<LinearLayout>(R.id.SendImage)
+        btnImage!!.setOnClickListener {
+            Toast.makeText(applicationContext, "image", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun showToast(message: String) {
