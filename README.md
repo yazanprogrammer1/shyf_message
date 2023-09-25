@@ -24,3 +24,4 @@ This application is a chat application affiliated with the main shyf application
 * Coroutines
 * Volley
 * Paging 3
+* MVVM
