@@ -1,4 +1,3 @@
-# shyf_message
 # Shyf messageing Social Media Android App with Kotlin
 
 This application is a chat application affiliated with the main shyf application.
